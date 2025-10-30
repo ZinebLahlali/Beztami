@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+      src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+     
+    <link href="/src/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <header class="grid place-items-start p-8 bg-blue-600">
+      <div
+        class="bg-yellow-500 border border-gray-100 rounded-full w-32  h-32 grid place-items-center  ">
+        <img src="cash.png" alt class="w-32 md:w-32 lg:w-32 mt-5 " />
+      </div>
+    </header>
+
+    <div class="container  mt-20 flex justify-start  mx-auto">
+
+      <div class="grid md:grid-cols-3 grid-cols-1 justify-between  gap-10 mb-50">
+        <div
+          class=" w-100 h-24 bg-red-500 border border-gray-200 rounded-lg shadow-sm flex justify-center place-items-center">
+
+          <p class="text-gray-100 font-bold inline-flex"> Income: -500DH
+             <svg xmlns="http://www.w3.org/2000/svg" height="10" width="10"viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#ffffff"
+                d="M297.4 566.6C309.9 579.1 330.2 579.1 342.7 566.6L502.7 406.6C515.2 394.1 515.2 373.8 502.7 361.3C490.2 348.8 469.9 348.8 457.4 361.3L352 466.7L352 96C352 78.3 337.7 64 320 64C302.3 64 288 78.3 288 96L288 466.7L182.6 361.3C170.1 348.8 149.8 348.8 137.3 361.3C124.8 373.8 124.8 394.1 137.3 406.6L297.3 566.6z" />
+              </svg>
+
+          </p>
+
+        </div>
+            <div class=" w-100 h-24 bg-blue-500 border border-gray-200 rounded-lg shadow-sm flex justify-center place-items-center">
+                  <p class="text-gray-100 font-bold"> Net Balance: 1200DH</p>
+              </div>
+            <div class="w-100 h-24 bg-green-500 border border-gray-200 rounded-lg shadow-sm flex justify-center place-items-center" id="clic">
+                  <p class="text-gray-100 font-bold inline-flex"> Depens: +200DH<svg xmlns="http://www.w3.org/2000/svg" height="10" width="10" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#ffffff" d="M342.6 81.4C330.1 68.9 309.8 68.9 297.3 81.4L137.3 241.4C124.8 253.9 124.8 274.2 137.3 286.7C149.8 299.2 170.1 299.2 182.6 286.7L288 181.3L288 552C288 569.7 302.3 584 320 584C337.7 584 352 569.7 352 552L352 181.3L457.4 286.7C469.9 299.2 490.2 299.2 502.7 286.7C515.2 274.2 515.2 253.9 502.7 241.4L342.7 81.4z"/></svg>
+                  </p>
+            </div>
+      </div>
+      <div id="hide" class="hidden pb-10 bg-sky-200 w-[40vw] flex justify-center  place-items-center rounded-lg ml-40">
+        <form>
+          <div class="grid grid-cols-2 gap-10 justify-center place-items-center mt-5 mb-20">
+            <div><input  class="border rounded-lg" type="number" placeholder="Amont" /></div>
+            <div> <input  class="border rounded-lg" type="datetime-local" placeholder=""></div>
+          </div>
+          <div>
+            <div class="flex justify-center place-items-center"> 
+              <div>
+                    <p><label for="">Description:</label></p>
+                    <textarea  class="border rounded-lg" id="" name="description" placeholder="Say something" cols="50"></textarea>
+              </div>
+            </div>
+           <div class="block-flex justify-center place-items-center">
+             <div class=" border rounded-sm w-30 bg-blue-600" >
+                    <button class="ml-8">Submit</button>  
+            </div>
+             <div class=" place-items-center border rounded-sm w-30 mt-5 bg-yellow-400" >
+                    <button class="ml-8">Cancel</button>  
+            </div>
+           </div>
+          </div>
+        </form>
+      </div>
+
+
+      <!-- <div class=" mt-50 grid grid-cols-3 mr-200 gap-100 ">
+       <div class="px-5 py-10 w-90 bg-red-500 border border-gray-200 rounded-lg flex flex-col gap-5">
+        <div class="flex justify-between w-full">
+          <p class="text-gray-100 font-bold"> Amount: -100Dh</p>
+          <p class="text-gray-100 font-bold">30.10.2025</p>
+        </div>
+        <p class="text-gray-100 font-bold">For internet</p>
+       </div>
+       
+        <div class="px-5 py-10 w-90 bg-green-500 border border-gray-200 rounded-lg flex flex-col gap-5">
+        <div class="flex justify-between w-full">
+          <p class="text-gray-100 font-bold"> Amount: +2000Dh</p>
+          <p class="text-gray-100 font-bold">29.10.2025</p>
+        </div>
+        <p class="text-gray-100 font-bold"> My salary</p>
+       </div>
+        <div class="px-5 py-10 w-90 bg-red-500 border border-gray-200 rounded-lg flex flex-col gap-5">
+        <div class="flex justify-between w-full">
+          <p class="text-gray-100 font-bold"> Amount: -500Dh</p>
+          <p class="text-gray-100 font-bold">25.10.2025</p>
+        </div>
+        <p class="text-gray-100 font-bold">For Shopping</p>
+       </div>
+      </div> -->
+
+
+    </div>
+
+
+     <script src="script.js"></script>
+
+  </body>
+</html>

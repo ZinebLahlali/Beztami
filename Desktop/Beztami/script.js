@@ -25,8 +25,6 @@ Close.addEventListener('click', () =>{history.classList.add('hidden');})
 openFormbtn.addEventListener('click', () => {Open.classList.remove('hidden');});
 closeFormbtn.addEventListener('click', () => {Open.classList.add('hidden');});
 openHistory.addEventListener('click', () => {history.classList.toggle('hidden');});
-   
-
 
 //  preventDefault: remove default event
 
@@ -64,23 +62,22 @@ const addTransaction = () => {
     nbr_tr++; 
     seeData();
 }
- let seeData = () =>{
-    history.innerHTML = "";
+ let seeData = () => {
+    const historyItems = document.getElementById('historyItems');
+    historyItems.innerHTML = "";
 
-   for (let i = 0; i < nbr_tr; i++) {
+    for (let i = 0; i < nbr_tr; i++) {
         let item = localStorage.getItem('transaction ' + i);
-        if (!item) continue; 
+        if (!item) continue;
 
         let Affichage = JSON.parse(item);
-
-       
         let am = Number(Affichage.amont);
+
         if (Affichage.type === 'DE') depnse += am;
         else income += am;
 
-        // créer div
         let element = document.createElement('div');
-        element.classList.add('px-5', 'py-3', 'rounded', 'm-2', 'text-white');
+        element.classList.add('px-5', 'rounded', 'm-2', 'text-white');
         element.classList.add(Affichage.type === 'DE' ? 'bg-red-500' : 'bg-green-500');
 
         element.innerHTML = `
@@ -91,14 +88,14 @@ const addTransaction = () => {
             <p>${Affichage.descr}</p>
         `;
 
-        history.appendChild(element);
+        historyItems.appendChild(element);
     }
 
-    // mettre à jour les totaux
     totalincome.textContent = `$${income}`;
     totaldepens.textContent = `$${depnse}`;
     totalbalnce.textContent = `$${income - depnse}`;
 };
+
 
 //Afficher les données au chargement de la page
 window.addEventListener("DOMContentLoaded", seeData);

@@ -97,13 +97,12 @@
               </div>
 
               <div>
-                <label for="countries"
-                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select
+                <label for="type"
+                  class="block mb-2 text-sm font-medium text-gray-900">Select
                   an option</label>
                 <select id="type"
                   class="bg-gray-900 border border-gray-300 text-gray-900 text-sm rounded-lg  block w-80 p-2.5 dark:bg-gray-100 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                  <option selected>Income OR Depens</option>
-                  <option value="IN">Income</option>
+                  <option selected>Income</option>
                   <option value="DE">Depens</option>
 
                 </select>
@@ -119,20 +118,25 @@
                 class="focus:outline-none text-white bg-red-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mt-5 dark:focus:ring-yellow-900">Cancel</button>
 
             </div>
-
           </div>
-
         </form>
       </div>
 
       
 
 
-
-      <div id="historique"  class="hidden  inset-0 overflow-auto bg-black/75 absolute grid grid-cols-1 rounded-lg px-5 gap-5 z-auto">
-         <button id="close" class=" close_btn   cursor-pointer  hover:bg-blue-800  font-medium rounded-sm  text-sm px-5 py-2.5 me-2">Close</button>
-       
+      <div id="historique" class="hidden overflow-auto bg-black/75 absolute inset-0 grid place-items-center rounded-lg z-50">
+          <div class="bg-gray-800 p-5 rounded-lg w-96">
+              <div> 
+                  <button id="close" class="close_btn cursor-pointer bg-blue-500 hover:bg-blue-800 font-medium rounded-sm text-sm px-5 mb-2">Close</button> 
+              </div>
+              <div id="historyItems" class="mt-2">
+                <!-- historique ici -->
+              </div>
+          </div>
       </div>
+
+
 
     </div>
 

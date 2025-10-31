@@ -10,6 +10,7 @@ console.log(openFormbtn, closeFormbtn, Open)
 const totalincome=document.getElementById('income_p')
 const totaldepens=document.getElementById('expenses_p')
 const totalbalnce=document.getElementById('balance_p')
+const history= document.getElementById("historique")
 let income =0;
 let net_balnce;
 let depnse=0;
@@ -82,12 +83,26 @@ const addTransaction = () => {
 
     for(let i = 0 ;i<nbr_tr; i++){
         let Affichage = JSON.parse(localStorage.getItem('transaction ' + i));
-        load+= Amont;
+        // load+= Number(Affichage.Amont);
         let element = document.createElement('div')
-        element.innerHTML= "<div class=\"px-5 py-10 w-90 bg-red-500 border border-gray-200 rounded-lg flex flex-col gap-5\"><div class=\"flex justify-between w-full\"><p class=\"text-gray-100 font-bold\">`$${Affichage.Amont}`</p><p class=\"text-gray-100 font-bold\">`$${Affichage.date}`</p></div><p class=\"text-gray-100 font-bold\">`$${Affichage.desc}`</p></div>"
+        element.innerHTML='<div class="px-5 py-10 border border-gray-200 rounded-lg"><div class="flex justify-between w-full"><p class="text-gray-100 font-bold">'
+        + Affichage.amont
+        + '</p><p class="text-gray-100 font-bold">'
+        + Affichage.date
+        +'</p></div><p class="text-gray-100 font-bold">'
+        +Affichage.descr
+        +'</p></div>'
+        if(Affichage.type == 'DE'){
+            element.classList.add('bg-red', 'col-span-1')
+        }
+
         document.getElementById("historique").appendChild(element);
+        // console.log(element);
  }  
  }
+  openHistory.addEventListener('click', () => {
+        history.classList.toggle('hidden');
+  });
    
   
 

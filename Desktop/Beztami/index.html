@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="/src/style.css">
   </head>
-  <body onload="seeData()">
+  <body>
     <header class="grid place-items-start bg-yellow-500 p-8 bg-blue-6">
       <div
         class=" flex rounded-full w-full flex-wrap gap-5  h-auto flex items-center justify-between">
@@ -23,7 +23,7 @@
           <button id="openForm"
           class="border border-gray-200 rounded-full w-35 h-10 bg-amber-800 hover:bg-yellow-500 cursor-pointer">Add
           transaction</button>
-          <button id="openHistory"
+          <button id="openHistoryButton"
           class="border border-gray-200 rounded-full w-35 h-10 bg-amber-800 hover:bg-yellow-500 cursor-pointer">History</button>
         </div>
       </div>
@@ -67,10 +67,10 @@
       </div>
 
       <div id="hide"
-        class=" hidden absolute bg-yellow-500    flex justify-between  place-items-center rounded-lg px-5 ml-70   z-auto">
+        class=" backdrop-blur-lg hidden absolute bg-gray-100  flex  justify-center  place-items-center rounded-lg px-5   z-auto w-full left-0 top-50 h-80">
         <form id="form">
           <div class=" grid p-6 ">
-            <div class=" grid grid-cols-2 gap-2">
+            <div class=" grid grid-cols-2  justify-between gap-10">
               <div>
                 <label for="Amont">Amont</label>
                 <input id="Amont" value="" min="0"
@@ -87,7 +87,7 @@
               </div>
             </div>
 
-            <div class=" grid grid-cols-2 gap-2">
+            <div class=" grid grid-cols-2 gap-10">
               <div>
                 <p><label for>Description:</label></p>
                 <textarea
@@ -113,10 +113,10 @@
             </div>
             <div class="">
               <button type="button" id="submit"
-                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Submit</button>
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Submit</button>
  
               <button type="button" id="closeForm"
-                class="focus:outline-none text-white bg-red-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-yellow-900">Cancel</button>
+                class="focus:outline-none text-white bg-red-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mt-5 dark:focus:ring-yellow-900">Cancel</button>
 
             </div>
 
@@ -125,34 +125,13 @@
         </form>
       </div>
 
-      <!-- <div class=" mt-50 grid grid-cols-3 mr-200 gap-100 ">
-       <div class="px-5 py-10 w-90 bg-red-500 border border-gray-200 rounded-lg flex flex-col gap-5">
-        <div class="flex justify-between w-full">
-          <p class="text-gray-100 font-bold"> Amount: -100Dh</p>
-          <p class="text-gray-100 font-bold">30.10.2025</p>
-        </div>
-        <p class="text-gray-100 font-bold">For internet</p>
-       </div>
+      
+
+
+
+      <div id="historique"  class="hidden  inset-0 overflow-auto bg-black/75 absolute grid grid-cols-1 rounded-lg px-5 gap-5 z-auto">
+         <button id="close" class=" close_btn   cursor-pointer  hover:bg-blue-800  font-medium rounded-sm  text-sm px-5 py-2.5 me-2">Close</button>
        
-        <div class="px-5 py-10 w-90 bg-green-500 border border-gray-200 rounded-lg flex flex-col gap-5">
-        <div class="flex justify-between w-full">
-          <p class="text-gray-100 font-bold"> Amount: +2000Dh</p>
-          <p class="text-gray-100 font-bold">29.10.2025</p>
-        </div>
-        <p class="text-gray-100 font-bold"> My salary</p>
-       </div>
-        <div class="px-5 py-10 w-90 bg-red-500 border border-gray-200 rounded-lg flex flex-col gap-5">
-        <div class="flex justify-between w-full">
-          <p class="text-gray-100 font-bold"> Amount: -500Dh</p>
-          <p class="text-gray-100 font-bold">25.10.2025</p>
-        </div>
-        <p class="text-gray-100 font-bold">For Shopping</p>
-       </div>
-      </div> -->
-
-
-      <div id="historique"  class="hidden fixed inset-0 overflow-auto bg-black/75 absolute grid grid-cols-2 rounded-lg px-5 gap-5 z-auto">
-        
       </div>
 
     </div>
